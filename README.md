@@ -110,4 +110,4 @@ s2d
 
 ## License
 
-The module is available as open source under the terms of the [MIT License](https://github.com/a6b8/repos2doc/blob/main/LICENSE).
+The module is available as open source under the terms of the [Apache 2.0. License](https://github.com/a6b8/sitemap2doc/blob/main/LICENSE).
