@@ -1,3 +1,11 @@
+/*
+    Disclaimer:
+    The use of this software is governed by the terms and conditions of the Apache License 2.0. Please review the license agreement carefully before downloading or using this software.
+    Furthermore, downloading content from websites using this software is subject to compliance with the rules and permissions set forth in the websites' robots.txt files. Prior to any downloading activity, ensure that you have obtained necessary permissions and that your actions align with the guidelines specified in the robots.txt file of the respective website.
+    By downloading and using this software, you acknowledge and agree to abide by both the terms of the Apache License 2.0 and any applicable rules outlined in robots.txt files. Unauthorized downloading and use may be in violation of legal and ethical standards.
+*/
+
+
 import { config as cfg } from './data/config.mjs'
 import moment from 'moment'
 import { keyPathToValue, printValidation } from './helpers/mixed.mjs' 

@@ -1,0 +1,1 @@
+Diese Modul lädt alle Webseite herunter die unter der Sitemap.xml hinterlegt sind. Und fügt sie zu einem Dokument zusammen. 

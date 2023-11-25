@@ -2,6 +2,7 @@
 
 # Sitemap 2 Doc
 
+This module downloads all web pages listed in the Sitemap.xml file and compiles them into a single document.
 
 > Designed for AI Embedding Generation
 
