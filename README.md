@@ -1,6 +1,6 @@
 ![CircleCI](https://img.shields.io/circleci/build/github/a6b8/sitemap2doc/main)
 
-# Repos 2 Doc
+# Sitemap 2 Doc
 
 
 > Designed for AI Embedding Generation
@@ -34,7 +34,7 @@ node index.mjs
 
 ## Table of Contents
 
-- [Repos 2 Doc](#repos-2-doc)
+- [Sitemap 2 Doc](#sitemap-2-doc)
   - [Quickstart](#quickstart)
     - [Node.js](#nodejs)
   - [Table of Contents](#table-of-contents)
