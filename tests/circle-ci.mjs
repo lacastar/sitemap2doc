@@ -1,4 +1,4 @@
-import { Sitemap2Doc } from './src/Sitemap2Doc.mjs'
+import { Sitemap2Doc } from './../src/Sitemap2Doc.mjs'
 
 try {
     const s2d = new Sitemap2Doc()
