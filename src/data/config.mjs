@@ -21,16 +21,6 @@ const config = {
             'description': "Allowed are 'https://' URLs with valid characters in the domain and path, excluding spaces, '/', '$,' '?,' or '#.'"
         }
     }
-/*
-    'minaDocs': {
-        'baseUrl': 'https://docs.minaprotocol.com',
-        'sitemap': 'https://docs.minaprotocol.com/sitemap.xml',
-        'sitemapSource': './data/docs/0-sitemap.json',
-        'contentRaw': "./content/docs/raw/{{name}}.html",
-        'mergeRawFiles': './content/docs/raw/',
-        'mergeDocument': './data/docs/'
-    },
-*/
 }
 
 
