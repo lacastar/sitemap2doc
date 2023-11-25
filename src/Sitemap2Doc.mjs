@@ -80,7 +80,7 @@ export class Sitemap2Doc {
                 return acc
             }, {} )
         this.#config = config
-        return true
+        return this
     }
 
 
