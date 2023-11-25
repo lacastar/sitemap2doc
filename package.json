@@ -1,6 +1,6 @@
 {
   "name": "sitemap2doc",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "This module downloads all web pages listed in the Sitemap.xml file and compiles them into a single document.",
   "main": "./src/Sitemap2Doc.mjs",
   "scripts": {
