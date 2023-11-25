@@ -8,8 +8,6 @@ This module downloads all web pages listed in the Sitemap.xml file and compiles 
 
 ## Quickstart
 
-### Node.js
-
 **Terminal**
 ```bash
 npm init -y && npm i sitemap2doc
@@ -37,7 +35,6 @@ node index.mjs
 
 - [Sitemap 2 Doc](#sitemap-2-doc)
   - [Quickstart](#quickstart)
-    - [Node.js](#nodejs)
   - [Table of Contents](#table-of-contents)
   - [Methods](#methods)
     - [getDocument()](#getdocument)
