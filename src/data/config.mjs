@@ -1,6 +1,6 @@
 const config = {
     'download': {
-        'chunkSize': 4,
+        'chunkSize': 2,
         'maxFileSizeBytes': 4194304 // 4 * 1024 * 1024
     },
     'path': {
