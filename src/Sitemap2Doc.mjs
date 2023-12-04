@@ -136,7 +136,7 @@ export class Sitemap2Doc {
                 } else {
                     console.log("Current directory:", process.cwd())
                     console.log( `Path ${path} does exist, for security delete content, manually.` )
-                    if(path!==".") process.exit( 1 )
+                    //if(path!==".") process.exit( 1 )
                 }
             } )
         return true
