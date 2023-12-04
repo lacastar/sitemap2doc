@@ -1,5 +1,5 @@
 {
-  "name": "sitemap2doc",
+  "name": "sitemap2docext",
   "version": "0.0.2",
   "description": "This module downloads all web pages listed in the Sitemap.xml file and compiles them into a single document.",
   "main": "./src/Sitemap2Doc.mjs",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [ "sitemap", "gpt"],
-  "author": "a6b8",
+  "author": "lacastar - a6b8",
   "license": "Apache 2.0.",
   "dependencies": {
     "axios": "^1.6.2",

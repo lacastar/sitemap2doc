@@ -28,8 +28,8 @@ export class Sitemap2Doc {
 
     async getDocument( { projectName, sitemapUrl, silent=false } ) {
 
-        const [ m, c ] = this.#validateStart( { projectName, sitemapUrl, silent } )
-        printValidation( { 'messages': m, 'comments': c } )
+       // const [ m, c ] = this.#validateStart( { projectName, sitemapUrl, silent } )
+       // printValidation( { 'messages': m, 'comments': c } )
 
         this.#silent = silent
         const cmd = this.#prepareCmd( { projectName, sitemapUrl } )
@@ -60,7 +60,7 @@ export class Sitemap2Doc {
             .entries( config['path'] )
             .reduce( ( acc, a, index ) => {                
                 const[ key, value ] = a
-
+                console.log('value ', value)
                 switch( key ) {
                     case 'root':
                         acc[ key ] = value
@@ -109,6 +109,7 @@ export class Sitemap2Doc {
 
 
     #prepareFolders( { cmd } ) {
+        console.log("cmd: ", JSON.stringify(cmd))
         Object
             .values( cmd )
             .map( value => {
@@ -133,8 +134,9 @@ export class Sitemap2Doc {
                 if( !fs.existsSync( path ) ) {
                     fs.mkdirSync( path, { 'recursive': true } )
                 } else {
+                    console.log("Current directory:", process.cwd())
                     console.log( `Path ${path} does exist, for security delete content, manually.` )
-                    process.exit( 1 )
+                    if(path!==".") process.exit( 1 )
                 }
             } )
         return true
@@ -202,11 +204,15 @@ export class Sitemap2Doc {
             await Promise.all(
                 groups[ i ]
                     .map( async( url, index ) => {
+                        console.log("url ", url)
                         const content = await this.#getPage( { url } )
+                        console.log("content ", JSON.stringify(content))
+                        
                         let fileName = ''
                         fileName += cmd['content']
                         fileName += `${i}.html`
 
+                        console.log("filename ", JSON.stringify(fileName))
                         fs.writeFileSync(
                             fileName,
                             content,
@@ -228,7 +234,12 @@ export class Sitemap2Doc {
 
 
     async #download( { url } ) {
-        const { data } = await axios.get( url )
+        if(url.startsWith("http")) {
+          const dat = await axios.get( url )
+          return dat.data
+        }
+        
+        const data = fs.readFileSync( url, 'utf-8' )
         return data
     }
 
