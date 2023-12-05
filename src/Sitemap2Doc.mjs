@@ -13,7 +13,8 @@ import axios from 'axios'
 import xml2js from 'xml2js'
 import fs from 'fs'
 import path from 'path'
-
+import extractor from 'unfluff'
+//extractor = require('unfluff');
 
 export class Sitemap2Doc {
     #config
@@ -206,7 +207,8 @@ export class Sitemap2Doc {
                     .map( async( url, index ) => {
                         console.log("url ", url)
                         const content = await this.#getPage( { url } )
-                        console.log("content ", JSON.stringify(content))
+                        let text = JSON.stringify(extractor(content))
+                        //console.log("content ", JSON.stringify(content))
                         
                         let fileName = ''
                         fileName += cmd['content']
@@ -215,7 +217,7 @@ export class Sitemap2Doc {
                         console.log("filename ", JSON.stringify(fileName))
                         fs.writeFileSync(
                             fileName,
-                            content,
+                            text,
                             'utf-8'
                         )
                         _index ++
